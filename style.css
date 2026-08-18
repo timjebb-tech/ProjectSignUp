@@ -1,7 +1,33 @@
-#logo {
-    width: 40vw;
-    height:100vw;
-  
-    object-fit: cover; /* Crops the image to fill the box perfectly */
+:root {
+    --img-width: 35vw;
+    --left-crop: 34vw;
+    --right-crop: 0vw;
+}
 
+.crop-container {
+  width: var(--img-width);         /* Set your exact container width */
+  height: 100vw;       /* Set your exact container height */
+  overflow: hidden;    /* Hides the cropped parts of the image */
+  position: relative;  /* Acts as an anchor for the image inside */
+}
+
+.crop-container img {
+  position: absolute;
+  top: 0;
+  
+  /* Push the image left-crop to the left to chop off the left edge */
+  left: calc(var(--left-crop ) * -1);  
+  
+  
+  /* Make the image wider than the container by exactly the total amount cropped */
+  /* Left crop  + Right crop  = extra width needed */
+  /* width: calc( var(--img-width) + var(--right-crop));  */
+
+  width: 90vw;
+  
+  /* Make the image stretch to fill the full height of the container */
+  height: 100%; 
+  
+  /* Ensures the image doesn't stretch out of proportion */
+  object-fit: cover; 
 }
