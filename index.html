@@ -7,18 +7,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="crop-container">
-        <figure>
-                    <img src="./images/waterLily.JPG" alt="A picture of a water lily flower">
-                    <figcaption id="caption">Photo by Tim, in His Garden</figcaption>
-                </figure>      
-        <div id="logo-container">
-            <div id="logo">
-                <img src="images/odin-lined.png" alt="A drawing of Odin's face" id="odin">
-                <p id="odin-text">ODIN</p>
+    <div class="page-container">
+        <div class="crop-container">
+            <figure>
+                        <img src="./images/waterLily.JPG" alt="A picture of a water lily flower">
+                        <figcaption id="caption">Photo by Tim, in His Garden</figcaption>
+                    </figure>      
+            <div id="logo-container">
+                <div id="logo">
+                    <img src="images/odin-lined.png" alt="A drawing of Odin's face" id="odin">
+                    <p id="odin-text">ODIN</p>
+                </div>
             </div>
+        </div> 
+
+        <div class="form-container">
+            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.
+            Sign up now to get started.
+            You know you want to.</p>
+            <p>Let's do this!</p>
+            <div class="input-group">
+                <label for="firstname">FIRST NAME*</label>
+                <input type="text" placeholder="Thor" name="firstname" id="firstname" required>
+            </div>
+            <div class="input-group">
+                <label for="lastname">LAST NAME*</label>
+                <input type="text" placeholder="Odinsson" name="lastname" id="lastname" required>
+            </div>
+            <div class="input-group">
+                <label for="email">EMAIL*</label>
+                <input type="email" placeholder="thor.odinsson@valhalla.com" name="email" id="email" required>
+            </div>
+            <div class="input-group">
+                <label for="phone-number">PHONE</label>
+                <input type="text" name="phone-number" id="phone-number">
+            </div>
+            <div class="input-group">
+                <label for="password">PASSWORD*</label>
+                <input type="password" placeholder="********" name="password" id="password" required>
+            </div>
+            <div class="input-group">
+                <label for="repeat-password">REPEAT PASSWORD*</label>
+                <input type="password" placeholder="********" name="repeat-password" id="repeat-password" required>
+            </div>
+            <button>Create Account</button>
+            <p>Already have an account?   <a href="">Log In</a></p>
         </div>
-    </div> 
+    </div>
     
 </body>
 </html>

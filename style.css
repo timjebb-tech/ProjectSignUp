@@ -20,6 +20,10 @@
     font-display: swap;
 }
 
+.page-container {
+  display: flex;
+}
+
 .crop-container {
   width: var(--img-width);         /* Set your exact container width */
   height: 100vw;       /* Set your exact container height */
@@ -91,3 +95,16 @@
     bottom: 50px;
 }
 
+.input-group {
+  /* Turn the container into a flexbox */
+  display: flex;
+  
+  /* Stack the items vertically (top to bottom) instead of side-by-side */
+  flex-direction: column;
+  
+  /* Add a tiny bit of space below the label so it doesn't touch the box */
+  gap: 8px; 
+  
+  /* Optional: Set a width so the text box doesn't stretch across the whole screen */
+  width: 300px;
+}
