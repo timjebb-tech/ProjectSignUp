@@ -69,3 +69,13 @@
   top: 350px;
 }
 
+#caption {
+    margin: 0;font-family: Norse, 'Courier New', Courier, monospace;
+    font-size: 24px; 
+    color: white;
+    z-index: 100;
+    position: absolute;
+    left: 140px;
+    bottom: 50px;
+}
+
