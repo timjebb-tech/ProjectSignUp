@@ -4,6 +4,22 @@
     --right-crop: 0vw;
 }
 
+@font-face {
+    font-family: 'Norse';
+    src: url('fonts/Norse.otf')  format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Norse';
+    src: url('fonts/Norsebold.otf')  format("opentype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 .crop-container {
   width: var(--img-width);         /* Set your exact container width */
   height: 100vw;       /* Set your exact container height */
@@ -31,3 +47,25 @@
   /* Ensures the image doesn't stretch out of proportion */
   object-fit: cover; 
 }
+
+
+
+#odin {  
+  left: 50px;
+  top: 350px;
+  height: 124px;
+  width: auto;
+  
+}
+
+#odin-text {
+  margin: 0;font-family: Norse, 'Courier New', Courier, monospace;
+  font-size: 124px; 
+  color: white;
+  z-index: 100;
+  position: absolute;
+  font-weight: bold;
+  left: 160px;
+  top: 350px;
+}
+
