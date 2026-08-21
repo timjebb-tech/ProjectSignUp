@@ -22,33 +22,44 @@
         </div> 
 
         <div class="form-container">
-            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.
-            Sign up now to get started.
-            You know you want to.</p>
-            <p>Let's do this!</p>
-            <div class="input-group">
-                <label for="firstname">FIRST NAME*</label>
-                <input type="text" placeholder="Thor" name="firstname" id="firstname" required>
+            <div id="disclaimer">
+                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br>
+                Sign up now to get started.</p>
+                <p>
+                You <em>know</em> you want to.</p>
+                
             </div>
-            <div class="input-group">
-                <label for="lastname">LAST NAME*</label>
-                <input type="text" placeholder="Odinsson" name="lastname" id="lastname" required>
-            </div>
-            <div class="input-group">
-                <label for="email">EMAIL*</label>
-                <input type="email" placeholder="thor.odinsson@valhalla.com" name="email" id="email" required>
-            </div>
-            <div class="input-group">
-                <label for="phone-number">PHONE</label>
-                <input type="text" name="phone-number" id="phone-number">
-            </div>
-            <div class="input-group">
-                <label for="password">PASSWORD*</label>
-                <input type="password" placeholder="********" name="password" id="password" required>
-            </div>
-            <div class="input-group">
-                <label for="repeat-password">REPEAT PASSWORD*</label>
-                <input type="password" placeholder="********" name="repeat-password" id="repeat-password" required>
+            <p id="lets">Let's do this!</p>
+            <div id="input-group">
+                
+                <div class="input">
+                    <label for="firstname">FIRST NAME*</label>
+                    <input type="text" placeholder="Thor" name="firstname" id="firstname" required  class="entry">
+                </div>
+                <div class="input">
+                    <label for="lastname">LAST NAME*</label>
+                    <input type="text" placeholder="Odinsson" name="lastname" id="lastname" required class="entry">
+                </div>
+                <div class="input">
+                    <label for="email">EMAIL*</label>
+                    <input type="email" placeholder="thor.odinsson@valhalla.com" name="email" id="email"  class="entry" required>
+                </div>
+                <div class="input">
+                    <label for="phone-number">PHONE</label>
+                    <input type="text" name="phone-number" id="phone-number" class="entry">
+                </div>
+                <div class="input">
+                    <label for="password">PASSWORD*</label>
+                    <input type="password"  class="entry" name="password" id="password" required minlength="8"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Enter your password">
+                    <p class="error-msg">Password must be 8+ characters with an uppercase letter, lowercase letter, and a number.</p>
+                </div>
+                <div class="input">
+                    <label for="repeat-password">REPEAT PASSWORD*</label>
+                    <input type="password" placeholder="repeat password" name="repeat-password" id="repeat-password" required class="entry" required minlength="8"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                    <p class="error-msg">Password must be 8+ characters with an uppercase letter, lowercase letter, and a number.</p>
+                </div>
             </div>
             <button>Create Account</button>
             <p>Already have an account?   <a href="">Log In</a></p>

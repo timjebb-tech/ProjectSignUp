@@ -95,16 +95,77 @@
     bottom: 50px;
 }
 
-.input-group {
-  /* Turn the container into a flexbox */
-  display: flex;
-  
-  /* Stack the items vertically (top to bottom) instead of side-by-side */
-  flex-direction: column;
-  
-  /* Add a tiny bit of space below the label so it doesn't touch the box */
-  gap: 8px; 
-  
-  /* Optional: Set a width so the text box doesn't stretch across the whole screen */
-  width: 300px;
+#disclaimer {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:larger;
+  font-weight:900;
+  padding: 5vw;
+  padding-right: 10vw;
+  padding-top: 10vw;
+
+  background-color: #f9f9f9;
+}
+#lets {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:larger;
+    font-weight:900;
+    padding-left: 5vw;
+    padding-right: 10vw;
+
+}
+
+#input-group {
+    padding-left: 5vw;
+    padding-bottom: 5vw;
+    padding-right: 10vw;
+    display: flex;
+    flex-wrap: wrap; /* Allows items to drop to the next line */
+    gap: 20px;       /* Puts space between your columns and rows */
+}
+
+.input {
+    /* Turn the container into a flexbox */
+    display: flex;
+
+    /* Stack the items vertically (top to bottom) instead of side-by-side */
+    flex-direction: column;
+
+    /* Add a tiny bit of space below the label so it doesn't touch the box */
+    gap: 8px; 
+
+    /* Optional: Set a width so the text box doesn't stretch across the whole screen */
+    width: 300px;
+
+    /* calc(50% - 10px) makes sure the items fit perfectly side-by-side */
+    /* while taking the 20px gap into account */
+    flex: 1 1 calc(50% - 10px); 
+
+    box-sizing: border-box; /* Keeps padding from breaking the width */
+}
+
+.entry {
+  outline: none;
+  border: 2px solid #E5E7EB;
+}
+
+input[type="email"]:user-invalid {
+    border: 2px solid red;
+}
+
+input[type="password"]:user-invalid {
+  border-color: #d9534f;
+  background-color: #fff5f5;
+}
+
+/* 2. Hide the error message by default */
+.error-msg {
+  display: none;
+  color: #d9534f;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* 5. The Magic Trick: Show the error message ONLY when the input is user-invalid */
+input[type="password"]:user-invalid ~ .error-msg {
+  display: block;
 }
