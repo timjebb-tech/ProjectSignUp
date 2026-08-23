@@ -175,3 +175,26 @@ input:focus {
   border-color: lightskyblue;
   box-shadow: 2px 2px lightblue;
 }
+
+#create-button-section {
+    padding-left: 5vw;
+    padding-bottom: 5vw;
+    padding-right: 10vw;
+    flex-wrap: wrap; /* Allows items to drop to the next line */
+    gap: 20px;       /* Puts space between your columns and rows */
+    font-family: Arial, Helvetica, sans-serif;
+  font-size:larger;
+}
+
+#create-button {
+  background-color: #596D48;
+  color: white;
+  border-radius: 10px;
+  font-size: medium;
+  padding:10px 35px;
+  
+}
+
+a {
+  text-decoration: none;
+}
