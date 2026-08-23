@@ -168,4 +168,10 @@ input[type="password"]:user-invalid {
 /* 5. The Magic Trick: Show the error message ONLY when the input is user-invalid */
 input[type="password"]:user-invalid ~ .error-msg {
   display: block;
+
+}
+
+input:focus {
+  border-color: lightskyblue;
+  box-shadow: 2px 2px lightblue;
 }
