@@ -1,5 +1,5 @@
 :root {
-    --img-width: 39vw;
+    --img-width: 40vw;
     --left-crop: 34vw;
     --right-crop: 0vw;
 }
@@ -41,15 +41,16 @@ body {
   position: absolute;
   top: 0;
   
-  /* Push the image left-crop to the left to chop off the left edge */
-  left: calc(var(--left-crop ) * -1);  
+  /* Push the image to the left to chop off the left edge */
   
+  left:-250px;
   
+  width: var(--img-width); 
   /* Make the image wider than the container by exactly the total amount cropped */
   /* Left crop  + Right crop  = extra width needed */
   /* width: calc( var(--img-width) + var(--right-crop));  */
 
-  width: 90vw;
+  /* width: 90vw; */
   
   /* Make the image stretch to fill the full height of the container */
   height: 100vh;
@@ -63,7 +64,7 @@ body {
   z-index: 100;
   top: 350px;
   display: flex;
-  max-width: 100%; 
+  max-width: var(--img-width);
   box-sizing: border-box; 
 }
 
@@ -101,7 +102,7 @@ body {
     color: white;
     z-index: 100;
     position: absolute;
-    left: 1vw;
+    left: 3vw;
     bottom: 1vw;    ;
 }
 
