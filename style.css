@@ -4,6 +4,11 @@
     --right-crop: 0vw;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 @font-face {
     font-family: 'Norse';
     src: url('fonts/Norse.otf')  format("opentype");
@@ -29,9 +34,10 @@
   height: 100vw;       /* Set your exact container height */
   overflow: hidden;    /* Hides the cropped parts of the image */
   position: relative;  /* Acts as an anchor for the image inside */
+  top: 0;
 }
 
-.crop-container img {
+.crop-container img#background-image {
   position: absolute;
   top: 0;
   
@@ -46,7 +52,7 @@
   width: 90vw;
   
   /* Make the image stretch to fill the full height of the container */
-  height: 100%; 
+  height: 100vh;
   
   /* Ensures the image doesn't stretch out of proportion */
   object-fit: cover; 
@@ -56,33 +62,37 @@
   position: relative;
   z-index: 100;
   top: 350px;
+  display: flex;
+  max-width: 100%; 
+  box-sizing: border-box; 
 }
 
 #logo {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); 
   z-index: 100;
   width: 90vw;
   height: 124px;
   top: 0;
+  display:flex;
+  align-items: center;
+  justify-content: space-evenly; 
 }
 
 
 #odin {  
-  left: 50px;
-  height: 124px;
-  width: auto;
+  height: 70%;            /* Scale relative to container height (e.g., 70% tall) */
+  width: auto;            /* Keeps the width in perfect proportion */
+  object-fit: contain; 
   
 }
 
 #odin-text {
-  position: absolute;
-  margin: 0;font-family: Norse, 'Courier New', Courier, monospace;
-  font-size: 124px; 
+  margin: 0;
+  font-family: Norse, 'Courier New', Courier, monospace;
+  font-size: 8cqh; 
   color: white;
   z-index: 100;
   font-weight: bold;
-  left: 160px;
 }
 
 #caption {
@@ -91,8 +101,8 @@
     color: white;
     z-index: 100;
     position: absolute;
-    left: 140px;
-    bottom: 50px;
+    left: 1vw;
+    bottom: 1vw;    ;
 }
 
 #disclaimer {
